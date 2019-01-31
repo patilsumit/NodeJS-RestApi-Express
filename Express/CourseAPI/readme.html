@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style>
+          body {
+              width: 80%;
+              margin-left: 10%;
+              font-family: 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback';
+              font-size: 1.2rem;
+              line-height: 2rem;
+          }
+  
+          /*p {
+              font-family: 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback';
+              font-size: 1.2rem;
+              line-height: 2rem;
+          }*/
+  
+          h1 {
+              text-align: center;
+              font: bold italic 2em/1em "Times New Roman", "MS Serif", "New York", serif;
+              margin-top: 10;
+              padding-top: 5px;
+              padding-bottom: 5px;
+              /* padding: 0; */
+              color: #8d8009;
+              border-top: solid #e7ce00 medium;
+              border-bottom: solid #e7ce00 thin;
+              /*border-bottom: dotted #e7ce00 thin;*/
+          }
+  
+          h2 {
+              /* font-family: "Times New Roman", "MS Serif", "New York", serif; */
+              font-family: 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback';
+              font-weight: normal;
+              font-size: 20px;
+              /* font-size: 1.2em; */
+          }
+  
+          em {
+              color: brown;
+          }
+  
+          code {
+              background: #f4f4f4;
+              border: 1px solid #ddd;
+              /* border-left: 3px solid #f36d33; */
+              border-left: 5px solid #c25222;
+              color: #666;
+              page-break-inside: avoid;
+              font-family: monospace;
+              font-size: 15px;
+              line-height: 1.6;
+              margin-bottom: 1.6em;
+              max-width: 100%;
+              overflow: auto;
+              padding: 1em 1.5em;
+              display: block;
+              word-wrap: break-word;
+          }
+      </style>
+</head>
+<body>
+<h1 id="course---restapi-using-express">Course - RestAPI using Express</h1>
+<h2 id="operations">Operations</h2>
+<ul>
+<li><p><strong>Create a course</strong> -&gt; POST /api/courses</p></li>
+<li><p><strong>Retrieve a course</strong> -&gt; GET /api/courses/:id</p></li>
+<li><p><strong>Update a course</strong> -&gt; PUT /api/courses/:id</p></li>
+<li><p><strong>Delete a course</strong> -&gt; DELETE /api/courses/:id</p></li>
+</ul>
+<h2 id="description">Description</h2>
+<ul>
+<li><p><strong>Create a course</strong> -&gt; POST /api/courses<br />
+<strong>REQ:</strong> {name: course-name}<br />
+<strong>RES:</strong> {id: course-id, name: course-name}</p></li>
+<li><p><strong>Retrieve a course</strong> -&gt; GET /api/courses/:id<br />
+<strong>REQ:</strong> None<br />
+<strong>RES:</strong> {id: course-id, name: course-name}</p></li>
+<li><p><strong>Update a course</strong> -&gt; PUT /api/courses/:id<br />
+<strong>REQ:</strong> {name: course-name}<br />
+<strong>RES:</strong> {id: course-id, name: course-name}</p></li>
+<li><p><strong>Delete a course</strong> -&gt; DELETE /api/courses/:id<br />
+<strong>REQ:</strong> None<br />
+<strong>RES:</strong> {id: course-id, name: course-name}</p></li>
+</ul>
+<h1 id="steps-to-test">Steps to Test</h1>
+<p><strong>Files</strong><br />
+1. basic.js - Implements only GET and POST APIs.<br />
+2. final.js - Implements GET, POST, PUT and DELETE methods. Uses joi for data validation.</p>
+<p><strong>Install externals modules (Only once)</strong></p>
+<pre><code>npm install</code></pre>
+<p><strong>Run</strong></p>
+<pre><code>node basic.js
+or
+node final.js</code></pre>
+<p><strong>Test the Course APIs</strong></p>
+<p>Use postman application to test the Rest APIs.</p>
+<p><strong>Example:</strong></p>
+<ul>
+<li>Get all courses: GET http://localhost:5000/api/courses<br />
+</li>
+<li><p>Get course with ID 1: GET http://localhost:5000/api/courses/1</p></li>
+<li>Create a course: POST http://localhost:5000/api/courses
+<ul>
+<li>Select body tab</li>
+<li>Chose raw -&gt; JSON(application/json)</li>
+<li><p>Specify course details in json format</p>
+<pre><code>{
+    &quot;name&quot;: &quot;Javascript&quot;
+}</code></pre></li>
+</ul></li>
+</ul>
+<h1 id="notes">Notes</h1>
+<p>These are different Form content types defined by W3C. If you want to send simple text/ ASCII data, then x-www-form-urlencoded will work. This is the default.</p>
+<p>But if you have to send non-ASCII text or large binary data, the form-data is for that.</p>
+<p>You can use Raw if you want to send plain text or JSON or any other kind of string. Like the name suggests, Postman sends your raw string data as it is without modifications. The type of data that you are sending can be set by using the content-type header from the drop down.</p>
+<p>Binary can be used when you want to attach non-textual data to the request, e.g. a video/audio file, images, or any other binary data file.</p>
+<p>Refer to this link for further reading: <a href="https://www.w3.org/TR/html401/interact/forms.html#h-17.13.4.1">Forms in HTML documents</a></p>
+</body>
+</html>

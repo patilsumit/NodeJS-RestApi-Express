@@ -1,0 +1,25 @@
+{
+  "pets": [
+    {
+      "name" : "Little Kitten",
+      "species" : "Cat",
+      "favFoods" : ["wet food", "dry food", "<strong>any</strong> food"],
+      "birthYear" : 2018,
+      "photo" : "/images/cat-1.jpg"
+    },
+    {
+      "name" : "British Bull Dog",
+      "species" : "Dog",
+      "favFoods" : [""],
+      "birthYear" : 2010,
+      "photo" : "/images/dog-1.jpg"
+    },
+    {
+      "name" : "Snowy",
+      "species" : "Cat",
+      "favFoods" : ["tuna", "catnip", "celery"],
+      "birthYear" : 2012,
+      "photo" : "/images/cat-2.jpg"
+    }
+  ]
+}

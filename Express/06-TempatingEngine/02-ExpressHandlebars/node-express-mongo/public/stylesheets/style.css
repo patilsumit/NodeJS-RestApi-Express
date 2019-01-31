@@ -1,0 +1,21 @@
+body {
+  padding: 30px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: gray;
+}
+
+a {
+  color: rgb(240, 244, 245);
+}
+
+.container{
+  clear: both;
+}
+a.navbar-brand{
+  clear: both;
+  padding: 0px;
+  margin: 0px;
+}
+.thumbnail{
+  background-color: bisque;
+}

@@ -1,0 +1,13 @@
+#!/usr/bin/env node
+
+/**
+ * Module dependencies.
+ */
+
+var app = require('../app');
+
+
+var port = process.env.PORT || '4300';
+app.set('port', port);
+
+app.listen(port);

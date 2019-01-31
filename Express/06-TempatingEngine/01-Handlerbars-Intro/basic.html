@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Handlebars Demo</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="page-wrap">
+        <h1>Handlebars Demo</h1>
+        <div id="pets-container"></div>
+    </div>
+
+    <!-- Handlebars template code goes in script tag. Check the 'type' prop -->
+    <script id="petsTemplate" type="text/x-handlebars-templates">
+        {{#each pets}}
+            <h2>{{name}}</h2>
+        {{/each}}
+    </script>
+
+    <script src="js/handlebars-v4.0.12.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

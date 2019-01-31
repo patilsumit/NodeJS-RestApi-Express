@@ -1,0 +1,14 @@
+{
+  "name": "jwttokentesting",
+  "version": "1.0.0",
+  "description": "JWT",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sumit",
+  "license": "MIT",
+  "dependencies": {
+    "jsonwebtoken": "^8.4.0"
+  }
+}
